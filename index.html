@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildMaster Construction</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">BuildMaster</div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="home" class="hero">
+      <div class="hero-content">
+        <h1>Building Your Dreams Into Reality</h1>
+        <p>Expert construction services with over 25 years of excellence</p>
+        <a href="#contact" class="cta-button">Get Free Quote</a>
+      </div>
+    </header>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-home"></i>
+            <h3>Residential Construction</h3>
+            <p>Custom homes and renovations tailored to your lifestyle</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-building"></i>
+            <h3>Commercial Projects</h3>
+            <p>Office buildings, retail spaces, and industrial facilities</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-hammer"></i>
+            <h3>Renovations</h3>
+            <p>Modernize and upgrade your existing space</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>Architecture & Design</h3>
+            <p>Professional planning and design services</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="/api/placeholder/400/300" alt="Luxury Home Project" />
+            <div class="project-info">
+              <h3>Luxury Home</h3>
+              <p>Modern 5-bedroom residential project</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/api/placeholder/400/300" alt="Office Complex" />
+            <div class="project-info">
+              <h3>Office Complex</h3>
+              <p>Contemporary commercial space</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="/api/placeholder/400/300" alt="Shopping Center" />
+            <div class="project-info">
+              <h3>Shopping Center</h3>
+              <p>Multi-unit retail development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>About BuildMaster</h2>
+          <p>
+            Since 1998, BuildMaster Construction has been delivering exceptional
+            construction services to our clients. Our commitment to quality,
+            innovation, and customer satisfaction has made us a leader in the
+            construction industry.
+          </p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">25+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>123 Construction Ave<br />Building City, ST 12345</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <p>(555) 123-4567</p>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <p>info@buildmaster.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>BuildMaster</h3>
+            <p>Building excellence, one project at a time.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 BuildMaster Construction. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
