@@ -6,10 +6,10 @@
 }
 
 :root {
-  --primary-color: #f39c12;
-  --secondary-color: #34495e;
-  --text-color: #2c3e50;
-  --light-gray: #ecf0f1;
+  --primary-color: #4f46e5;
+  --secondary-color: #4338ca;
+  --text-color: #1f2937;
+  --light-gray: #f3f4f6;
   --white: #ffffff;
 }
 
@@ -220,7 +220,43 @@ body {
 /* About Section */
 .about {
   padding: 5rem 0;
-  background-color: var(--light-gray);
+  background: radial-gradient(
+        circle farthest-side at 0% 50%,
+        #ffffff 23.5%,
+        #0000 0
+      )
+      47.25px 67.5px,
+    radial-gradient(circle farthest-side at 0% 50%, #f4f4f4 24%, #0000 0)
+      42.75px 67.5px,
+    linear-gradient(#ffffff 14%, #0000 0, #0000 85%, #ffffff 0) 0 0,
+    linear-gradient(
+        150deg,
+        #ffffff 24%,
+        #f4f4f4 0,
+        #f4f4f4 26%,
+        #0000 0,
+        #0000 74%,
+        #f4f4f4 0,
+        #f4f4f4 76%,
+        #ffffff 0
+      )
+      0 0,
+    linear-gradient(
+        30deg,
+        #ffffff 24%,
+        #f4f4f4 0,
+        #f4f4f4 26%,
+        #0000 0,
+        #0000 74%,
+        #f4f4f4 0,
+        #f4f4f4 76%,
+        #ffffff 0
+      )
+      0 0,
+    linear-gradient(90deg, #f4f4f4 2%, #ffffff 0, #ffffff 98%, #f4f4f4 0%) 0 0
+      #ffffff;
+  background-size: 90px 135px;
+  background-color: #ffffff;
 }
 
 .about-content {
@@ -230,7 +266,7 @@ body {
 }
 
 .about h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
 }
 
