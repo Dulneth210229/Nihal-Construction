@@ -162,6 +162,7 @@ body {
 .service-card {
   background-color: var(--white);
   padding: 1rem;
+  cursor: pointer;
   border-radius: 1rem;
   text-align: center;
   transition: transform 0.3s ease;
@@ -312,12 +313,16 @@ body {
   background-color: #ffffff;
 }
 
-.about-content {
+.about-content-hedding {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
-
+.about-content-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .about h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -338,8 +343,9 @@ body {
 .stat-item {
   padding: 2rem;
   background-color: var(--white);
-  border-radius: 5px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px,
+    rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
 }
 
 .stat-number {
@@ -427,7 +433,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: var(--secondary-color);
+  background-color: #34495e;
   color: var(--white);
   padding: 4rem 0 0;
 }
