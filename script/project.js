@@ -17,7 +17,8 @@ const projectsData = [
     startDate: "January 2024",
     estimatedCompletion: "December 2025",
     value: "$50 Million",
-    image: "/api/placeholder/600/400",
+    image:
+      "https://cdn.pixabay.com/photo/2017/04/02/09/08/bulldozer-2195329_640.jpg",
     details: {
       architect: "Urban Design Studio",
       clientType: "Private Developer",
