@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import "./styles.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Projects from "./components/Projects";
+import Process from "./components/Process";
+import About from "./components/About";
+import Testimonials from "./components/Testimonials";
+import Partners from "./components/Partners";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
+export default function App() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  // scroll reveal observer (adds .is-revealed to [data-reveal])
+  useEffect(() => {
+    const items = document.querySelectorAll("[data-reveal]");
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach(
+          (e) => e.isIntersecting && e.target.classList.add("is-revealed")
+        ),
+      { threshold: 0.1 }
+    );
+    items.forEach((i) => io.observe(i));
+    return () => io.disconnect();
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <main className="site">
+      <Navbar
+        mobileNavOpen={mobileNavOpen}
+        setMobileNavOpen={setMobileNavOpen}
+      />
+      <Hero />
+      <Services />
+      <Projects />
+      <Process />
+      <About />
+      <Testimonials />
+      <Partners />
+      <FAQ />
+      <Contact />
+      <section className="cta-banner" data-reveal>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          <b>Ready to build?</b> We can mobilize in as little as 14 days.
+          <a href="#contact" className="btn btn-primary">
+            Start your project
+          </a>
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </section>
+      <Footer />
+    </main>
+  );
 }
-
-export default App
