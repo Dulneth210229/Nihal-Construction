@@ -786,12 +786,14 @@ body {
 .modal-wrap {
   position: fixed;
   inset: 0;
+  z-index: 10000; /* was 2000; raise it just in case */
   display: grid;
   place-items: center;
+  padding: clamp(12px, 2.5vw, 24px);
   background: rgba(10, 37, 64, 0.45);
-  animation: fadeIn 0.2s ease;
-  padding: 24px;
-  z-index: 20;
+  height: 100dvh;
+  overflow: auto;
+  animation: fadeIn 0.18s ease;
 }
 .modal {
   width: min(1100px, 96vw);
