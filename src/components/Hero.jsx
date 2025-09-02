@@ -9,16 +9,19 @@ export default function Hero() {
         <i className="spark s3" />
       </div>
       <div className="hero-inner">
-        <div className="badge">Since ’98</div>
+        <div className="badge" style={{ color: "black" }}>
+          Since ’98
+        </div>
         <h1>
           Building the <span className="highlight">future</span>
           <br />
-          with a <em>retro</em> soul
+          with <em>Nihal</em> Construction
         </h1>
         <p className="lead">
           We deliver residential, commercial, industrial, and renovation
           projects across Sri Lanka— on time, safely, and with character.
         </p>
+
         <div className="cta">
           <a href="#projects" className="btn btn-primary">
             View Projects

@@ -10,9 +10,9 @@ export default function Footer() {
       </div>
       <div className="foot-inner">
         <div className="foot-col brand-col">
-          <div className="brand-mini">▩ RetroBuild</div>
+          <div className="brand-mini">Nihal Construction</div>
           <p>
-            RetroBuild is a full-service construction company delivering
+            Nihal-Construction is a full-service construction company delivering
             residential, commercial, and industrial projects across Sri Lanka.
             Since 1998 we’ve built with character, safety, and quality.
           </p>
@@ -46,9 +46,13 @@ export default function Footer() {
           <address>
             221 Galle Road, Colombo 04
             <br />
-            (+94) 11 2 345 678
+            (+94) 11 2 733 525
             <br />
-            info@retrobuild.lk
+            (+94) 75 9 462 453
+            <br />
+            (+94) 76 7 462 453
+            <br />
+            nihalconstruction.nihal@gmail.com
             <br />
             Mon–Fri 8:30–17:30
           </address>
@@ -91,7 +95,7 @@ export default function Footer() {
       </div>
       <div className="foot-bottom">
         <small>
-          © {new Date().getFullYear()} RetroBuild Construction Co. All rights
+          © {new Date().getFullYear()} Nihal Construction Co. All rights
           reserved.
         </small>
         <nav className="policy">

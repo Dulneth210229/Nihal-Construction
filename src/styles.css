@@ -13,6 +13,29 @@
 * {
   box-sizing: border-box;
 }
+/* Let clicks pass through hero decorations */
+.hero::before,
+.hero-deco,
+.hero-deco .spark {
+  pointer-events: none;
+}
+
+/* Make sure the buttons sit above any hero layers */
+.hero .btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* Nice-to-have: smooth scroll and offset for the sticky header */
+html {
+  scroll-behavior: smooth;
+}
+.section,
+#projects,
+#contact {
+  scroll-margin-top: 80px;
+} /* adjust if your header height differs */
+
 html,
 body,
 #root {
@@ -163,7 +186,7 @@ body {
   font-family: "Press Start 2P", monospace;
   font-size: 11px;
   background: var(--blue);
-  color: #fff;
+  color: #000000;
   padding: 8px 10px;
   border-radius: 6px;
   box-shadow: 0 6px 0 #051523;
@@ -872,13 +895,14 @@ body {
 }
 .hero-shot .nav {
   position: absolute;
+  opacity: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
   border: 2px solid var(--blue);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0);
   font-size: 28px;
   font-weight: 900;
   display: grid;

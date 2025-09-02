@@ -31,7 +31,7 @@ export default function About() {
             <span className="lbl">Years Experience</span>
           </div>
           <div className="stat">
-            <span className="num">96%</span>
+            <span className="num">99%</span>
             <span className="lbl">On-time Delivery</span>
           </div>
           <div className="stat">

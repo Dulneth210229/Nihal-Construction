@@ -1,13 +1,14 @@
 import React from "react";
+import logo from "../images/logo.png";
 
 export default function Navbar({ mobileNavOpen, setMobileNavOpen }) {
   return (
     <header className="nav">
       <a href="#home" className="brand">
-        <span className="brand-mark" aria-hidden>
-          ▩
-        </span>
-        Retro<span>Build</span>
+        {/* <span span className="brand-mark" aria-hidden></span> */}
+        <img src={logo} style={{ width: "2rem" }}></img>
+        Nihal
+        <span>Construction</span>
       </a>
       <button
         aria-label="Toggle navigation"
