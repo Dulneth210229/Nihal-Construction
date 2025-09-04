@@ -1047,3 +1047,171 @@ body {
     opacity: 1;
   }
 }
+
+/* =========================
+   RESPONSIVE PATCH (append-only)
+   - Nav, Testimonials, Process, About
+   - No color/style changes, only layout at smaller widths
+   ========================= */
+
+html,
+body {
+  overflow-x: hidden;
+} /* prevent sideways scroll */
+
+/* Navigation: smoother compression before the mobile menu */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 12px 6vw;
+  }
+  .links {
+    gap: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .links {
+    gap: 0.75rem;
+  }
+}
+
+/* Allow long headings/descriptions to wrap cleanly */
+@media (max-width: 900px) {
+  .section-head {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+}
+@media (max-width: 720px) {
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Process timeline: 4 ➜ 2 ➜ 1 columns */
+@media (max-width: 1200px) {
+  .process .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .process .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About: stats & certs collapse progressively */
+@media (max-width: 1200px) {
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .certs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+  .certs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Testimonials: 3 ➜ 2 ➜ 1 columns */
+@media (max-width: 1200px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hero CTAs wrap cleanly on very narrow screens (layout only) */
+@media (max-width: 540px) {
+  .cta {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+}
+
+/* =========================
+   MOBILE MODAL FIX (append-only)
+   - Full-window modal on phones
+   - Safe-area padding
+   - Reliable scrolling (iOS Safari & Android)
+   ========================= */
+
+/* Contain overscroll bounce so the page behind doesn't jump */
+.modal-wrap {
+  overscroll-behavior: contain;
+}
+
+/* Improve scroll physics inside the modal on iOS */
+.modal-body {
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+/* Phone layout: make modal full-screen and remove outer padding */
+@media (max-width: 720px) {
+  .modal-wrap {
+    padding: 0; /* use the whole viewport */
+    background: rgba(
+      10,
+      37,
+      64,
+      0.55
+    ); /* slightly stronger backdrop on small screens */
+  }
+
+  /* Full-window modal with safe-area support */
+  .modal {
+    width: 100vw;
+    height: 100svh; /* small-viewport unit = correct on mobile */
+    max-height: none; /* let height control it */
+    border-radius: 0; /* full-screen look */
+    box-shadow: none; /* avoid clipped shadow edges */
+    transform: none; /* prevent subtle subpixel shifts */
+  }
+
+  /* Sticky header height is ~56–64px; keep body perfectly sized below it */
+  .modal-head {
+    padding: 12px 16px;
+    padding-top: calc(12px + env(safe-area-inset-top, 0));
+  }
+
+  .modal-body {
+    max-height: calc(
+      100svh - 60px - env(safe-area-inset-top, 0) -
+        env(safe-area-inset-bottom, 0)
+    );
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0));
+  }
+
+  /* Gallery image a bit shorter on phones to keep controls visible */
+  .hero-shot img {
+    height: 44vh;
+  }
+
+  /* Make gallery arrows always tappable/visible on touch */
+  .hero-shot .nav {
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Tiny phones: slightly smaller header to free up space */
+@media (max-width: 380px) {
+  .modal-title {
+    font-size: 1rem;
+  }
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+}

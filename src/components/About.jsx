@@ -15,7 +15,7 @@ export default function About() {
             coordination, lean scheduling, and rigorous QA/QC.
           </p>
           <ul className="ticks">
-            <li>CIDB Grade CS2 • ICTAD C1</li>
+            <li>CIDB Grade CS2 • ICTAD C5</li>
             <li>Zero-LTI safety culture</li>
             <li>Dedicated QS & planning departments</li>
             <li>In-house joinery & steel fabrication</li>
